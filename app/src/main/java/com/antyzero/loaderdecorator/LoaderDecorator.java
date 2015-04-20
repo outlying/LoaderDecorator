@@ -43,13 +43,13 @@ public class LoaderDecorator extends RecyclerView.ItemDecoration {
 
         for ( int i = 0; i < parent.getChildCount(); i++ ) {
 
-            View itemView = parent.getChildAt( i );
+            View lastView = parent.getChildAt( i );
 
-            int position = parent.getChildLayoutPosition( itemView );
+            int position = parent.getChildLayoutPosition( lastView );
 
             // Draw loader under last item sivible on list
             if ( position + 1 == parent.getAdapter().getItemCount() ) {
-
+                renderer.drawBelow( parent, canvas, loader, lastView );
             }
         }
     }

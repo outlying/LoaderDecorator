@@ -42,4 +42,9 @@ public class LoaderRenderer {
 
         canvas.restore();
     }
+
+    public void drawBelow( RecyclerView parent, Canvas canvas, View loader, View lastView ) {
+
+
+    }
 }
